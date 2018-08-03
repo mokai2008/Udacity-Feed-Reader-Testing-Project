@@ -107,12 +107,13 @@ $(function() {
     describe('New Feed Selection', function(){
         
     
-        var newFeed = $('feed').html();
+        var newFeed;
 
         // Testing that content will be changed when new feed is loaded
         
         beforeEach(function(done){
             loadFeed(0, function(){
+                newFeed = $('feed').html();
                 loadFeed(1, done);
             });
         });
