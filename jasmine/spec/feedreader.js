@@ -89,9 +89,7 @@ $(function() {
         // Asynchronous test of loadFeed() 
         
         beforeEach(function(done){
-           loadFeed(0, function(){
-               done();
-           }); 
+           loadFeed(0, done);
         });
         
         it('at least has one entry', function(done) {
@@ -113,7 +111,7 @@ $(function() {
         
         beforeEach(function(done){
             loadFeed(0, function(){
-                newFeed = $('feed').html();
+                newFeed = $('.feed').html();
                 loadFeed(1, done);
             });
         });
